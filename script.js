@@ -35,3 +35,56 @@ is more than one character in the string. Return `val` and set `majorKey` to the
 
 15. Your answer should be a string value that equals 7. Is that what you got?
 */
+
+var majorKey = 42;
+if (majorKey >= 53) {
+    majorKey+=42; // same as majorKey = majorKey + 42
+} else {
+    majorKey-=13;
+}
+
+
+majorKey = majorKey + '11';
+console.log("Initial majorKey: " + majorKey);
+var keyChars = []
+for (i=0;i<majorKey.length;i++) {
+    keyChars[i] = majorKey.charAt(i)
+}
+console.log("Initial keyChars ", keyChars)
+keyChars.shift()
+keyChars.pop()
+var canin = ''
+for (i=keyChars.length-1;i>=0;i--){
+    canin = canin + keyChars[i]
+}
+console.log("Initial canin: ", canin);
+var majorKey = parseInt(majorKey);
+var keyChars = parseInt(keyChars);
+var canin = parseInt(canin);
+majorKey = majorKey + canin; 
+console.log("majorKey + canin: ", majorKey);
+if (majorKey < 60) {
+    majorKey = 14;
+} else if (majorKey === 2930) {
+    majorKey = 27;
+} else {
+    majorKey = 2;
+}
+console.log("majorKey after if statement: ", majorKey);
+
+var i = 10;
+while (i > 0) {
+    majorKey += 1;
+    i--;
+}
+
+function newFunc (val){
+    console.log(val);
+    var x = val.toString();
+    if (x.length > 1){
+        x = x.slice(1,);
+    }
+    return x 
+}
+majorKey = newFunc(majorKey);
+console.log(majorKey);
